@@ -17,16 +17,30 @@ class ViewController : ViewModel() {
         private set
     var jenisKlmn : String by mutableStateOf("")
         private set
+    var email_usr : String by mutableStateOf("")
+        private set
+    var status_usr : String by mutableStateOf("")
+        private set
+
+    var alamat_usr : String by mutableStateOf("")
+        private set
     private val _uiState = MutableStateFlow(DataClass())
     val uiState : StateFlow<DataClass> = _uiState.asStateFlow()
 
-    fun insertData (nm: String, tlp: String, jk: String){
+    fun setJenisKelamin(pilihJK : String) {
+        _uiState.update { currentState -> currentState.copy(jk = pilihJK) }
+    }
+
+    fun setStatus(pilihStatus : String) {
+        _uiState.update { currentState -> currentState.copy(status = pilihStatus) }
+    }
+
+    fun insertData(nm: String, tlp: String, jk: String, email: String, status : String, alamat : String) {
         namaUsr = nm;
         noTlp = tlp;
         jenisKlmn = jk;
-    }
-
-    fun setJenisKelamin(pilihJK : String) {
-        _uiState.update { currentState -> currentState.copy(jk = pilihJK) }
+        email_usr = email;
+        status_usr = status;
+        alamat_usr = alamat;
     }
 }
