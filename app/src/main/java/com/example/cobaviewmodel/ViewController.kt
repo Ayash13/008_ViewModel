@@ -17,9 +17,9 @@ class ViewController : ViewModel() {
         private set
     var jenisKlmn : String by mutableStateOf("")
         private set
-    var email_usr : String by mutableStateOf("")
-        private set
     var status_usr : String by mutableStateOf("")
+        private set
+    var email_usr : String by mutableStateOf("")
         private set
 
     var alamat_usr : String by mutableStateOf("")
