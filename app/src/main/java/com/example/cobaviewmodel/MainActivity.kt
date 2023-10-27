@@ -174,7 +174,7 @@ fun Tampilan(cobaViewModel: ViewController = viewModel()) {
 }
 
 @Composable
-fun TextResult( jenisnya: String, emailnya: String, statusnya : String, alamatnya : String) {
+fun TextResult( jenisnya: String, statusnya: String, alamatnya : String, emailnya : String) {
     ElevatedCard(
         elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
         modifier = Modifier

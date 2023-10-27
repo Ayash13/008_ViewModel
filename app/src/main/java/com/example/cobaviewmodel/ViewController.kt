@@ -24,6 +24,8 @@ class ViewController : ViewModel() {
 
     var alamat_usr : String by mutableStateOf("")
         private set
+
+
     private val _uiState = MutableStateFlow(DataClass())
     val uiState : StateFlow<DataClass> = _uiState.asStateFlow()
 
